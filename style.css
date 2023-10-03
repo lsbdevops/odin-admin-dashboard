@@ -40,3 +40,27 @@ body {
 .logo {
     border: 1px solid black;
 }
+
+.header {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    justify-items: start;
+}
+
+.header form {
+    margin-left: 20px;
+    width: 90%;
+}
+
+form > input[type="search"] {
+    width: 100%;
+}
+
+.user-options, .creation-buttons {
+    justify-self: center;
+}
+
+.user-bar{
+    margin-left: 20px;
+}
