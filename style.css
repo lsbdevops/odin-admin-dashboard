@@ -23,10 +23,10 @@ body {
 
 .sidebar {
     grid-row: 1 / span 2;
-    min-height: 100vh;
     display: grid;
     grid-template-rows: repeat(3, auto) 1fr;
     gap: 50px;
+    background-color: #fb923c;
 }
 
 .sidebar > * {
@@ -38,6 +38,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: #fff7ed;
 }
 
 .logo {
@@ -84,11 +85,12 @@ form > input[type="search"] {
 }
 
 .card {
-    border: 1px solid blue;
+    border: 1px solid #ea580c;
     height: 150px;
     padding: 10px;
     display: grid;
     grid-template-rows: auto auto 1fr;
+    background-color: #fff;
 }
 
 .card-icons {
@@ -108,14 +110,28 @@ form > input[type="search"] {
     padding: 10px;
 }
 
+.news-container {
+    background-color: #fff;
+    padding: 15px;
+}
+
 .news-container > .news:first-of-type {
     padding-top: 0px;
 }
 
 .news-container > .news:not(.news:last-of-type) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #7c2d12;
 }
 
 .card > h3 {
     margin: 0px;
+}
+
+.trending-users-container { 
+    background-color: #fff;
+}
+
+.trending-user {
+    height: 50px;
+    border: 1px solid #ea580c;
 }
