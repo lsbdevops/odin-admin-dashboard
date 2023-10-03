@@ -35,10 +35,14 @@ body {
 
 .main-content {
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .logo {
     border: 1px solid black;
+    margin-top: max(10px, 5%);
 }
 
 .header {
@@ -63,4 +67,55 @@ form > input[type="search"] {
 
 .user-bar{
     margin-left: 20px;
+}
+
+.projects, .announcements, .trending {
+    padding: 10px;
+}
+
+.projects {
+    grid-row: 1 / span 2;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid blue;
+    height: 150px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.card-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.icon {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+}
+
+.news {
+    padding: 10px;
+}
+
+.news-container > .news:first-of-type {
+    padding-top: 0px;
+}
+
+.news-container > .news:not(.news:last-of-type) {
+    border-bottom: 1px solid black;
+}
+
+.card > h3 {
+    margin: 0px;
 }
