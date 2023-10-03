@@ -16,17 +16,14 @@ body {
     padding: 0px;
 }
 
-.sidebar, .header, .main-content {
-    border: 1px solid black;
-    width: 100%;
-}
-
 .sidebar {
     grid-row: 1 / span 2;
     display: grid;
     grid-template-rows: repeat(3, auto) 1fr;
     gap: 50px;
     background-color: #fb923c;
+    box-shadow: #fb923c 0.1px 0px 2px;
+    z-index: 2;
 }
 
 .sidebar > * {
@@ -51,6 +48,8 @@ body {
     grid-template-columns: 65% 35%;
     align-items: center;
     justify-items: start;
+    box-shadow: 0px 1px 5px grey;
+    z-index: 1;
 }
 
 .header form {
@@ -86,11 +85,14 @@ form > input[type="search"] {
 
 .card {
     border: 1px solid #ea580c;
+    border-radius: 5px;
     height: 150px;
     padding: 10px;
     display: grid;
     grid-template-rows: auto auto 1fr;
     background-color: #fff;
+    box-shadow: 0.5px 1px 3px grey;
+
 }
 
 .card-icons {
@@ -113,6 +115,8 @@ form > input[type="search"] {
 .news-container {
     background-color: #fff;
     padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0.5px 1px 3px grey;
 }
 
 .news-container > .news:first-of-type {
@@ -129,9 +133,10 @@ form > input[type="search"] {
 
 .trending-users-container { 
     background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0.5px 1px 3px grey;
 }
 
 .trending-user {
     height: 50px;
-    border: 1px solid #ea580c;
 }
