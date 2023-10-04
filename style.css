@@ -167,7 +167,8 @@ form > img {
     justify-content: center;
     border: none;
     font-weight: bold;
-    font-size: min(1.5rem, 200%)
+    font-size: min(1.5rem, 200%);
+    cursor: pointer;
 }
 
 .user-bar {
@@ -179,7 +180,12 @@ form > img {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: var(--light-bg-colour)
+    background-color: var(--light-bg-colour);
+    font-size: 1.3em;
+}
+
+.main-content span {
+    color: rgb(54, 54, 54)
 }
 
 .projects, .announcements, .trending {
@@ -192,27 +198,31 @@ form > img {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .card {
     border: 1px solid var(--medium-line-colour);
     border-radius: 5px;
-    height: 150px;
-    padding: 10px;
+    height: 250px;
+    padding: max(20px, 8%) 10px 10px max(15px, 7.5%);
     display: grid;
     grid-template-rows: auto auto 1fr;
     background-color: #fff;
     box-shadow: 0.5px 1px 3px grey;
-
+    box-shadow: inset 3px 0px var(--medium-line-colour);
 }
 
 .card-icons {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
-    gap: 5px;
+    gap: 10px;
+}
+
+.card-icons > img {
+    width: 30px;
 }
 
 .icon {
@@ -245,12 +255,38 @@ form > img {
 }
 
 .trending-users-container { 
+    padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0.5px 1px 3px grey;
+    display: grid;
+    gap: 20px;
+}
+
+.trending-user:nth-child(even) {
+    background-color: aliceblue;
 }
 
 .trending-user {
-    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
 }
+
+.trending-user span {
+    grid-column: 2;
+}
+
+.trending-user > span:first-of-type {
+    font-weight: bold;
+    align-self: end;
+    color: black;
+}
+
+
+.trending-user > .avatar-small {
+    height: 5rem;
+    grid-row: 1 / span 2;
+}
+
 
