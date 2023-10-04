@@ -118,14 +118,17 @@ form > img {
 
 .user-options, .creation-buttons {
     justify-self: center;
-    justify-content: space-around;
     display: flex;
     width: 100%;
 } 
 
+.creation-buttons {
+    justify-content: space-around;
+}
+
 .user-options {
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: max(10px, 10%);
     font-size: 1.7rem;
     font-weight: bold;
@@ -135,8 +138,14 @@ form > img {
     height: 2.5rem;
 }
 
-.user-options > .avatar-small {
+.user-options .avatar-small {
     height: 5rem;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .user-bar {
