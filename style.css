@@ -3,6 +3,7 @@
     font-size: 62.5%;
     --light-bg-colour: #fff7ed;
     --medium-bg-colour: #fb923c;
+    --dark-bg-colour: #ea580c;
     --medium-line-colour: #ea580c;
     --dark-line-colour: #7c2d12;
 }
@@ -47,6 +48,14 @@ body {
     font-size: 1.5rem;
     color: inherit;
     text-decoration: none;
+}
+
+.sidebar-item > a:hover {
+    color: rgba(66, 65, 65, 0.9);
+}
+
+.sidebar-item > a:active {
+    color: black;
 }
 
 .logo {
@@ -168,7 +177,15 @@ form > img {
     border: none;
     font-weight: bold;
     font-size: min(1.5rem, 200%);
+}
+
+.header button:hover {
     cursor: pointer;
+    background-color: var(--dark-bg-colour);
+}
+
+.header button:active {
+    outline: 2px solid var(--dark-line-colour);
 }
 
 .user-bar {
