@@ -1,6 +1,10 @@
 /* Set root font size so that 1rem = 10px */
 :root {
-    font-size: 62.5%
+    font-size: 62.5%;
+    --light-bg-colour: #fff7ed;
+    --medium-bg-colour: #fb923c;
+    --medium-line-colour: #ea580c;
+    --dark-line-colour: #7c2d12;
 }
 
 * {
@@ -21,8 +25,8 @@ body {
     display: grid;
     grid-template-rows: repeat(3, auto) 1fr;
     gap: 50px;
-    background-color: #fb923c;
-    box-shadow: #fb923c 0.1px 0px 2px;
+    background-color: var(--medium-bg-colour);
+    box-shadow: var(--medium-bg-colour) 0.1px 0px 2px;
     z-index: 2;
 }
 
@@ -53,6 +57,7 @@ body {
     gap: 10px;
     font-weight: bold;
     font-size: 2.5rem;
+    letter-spacing: 0.5rem;
     padding-right: 5px;
 }
 
@@ -66,36 +71,95 @@ body {
     grid-template-columns: 65% 35%;
     align-items: center;
     justify-items: start;
-    gap: 25px;
+    gap: max(15px, 3vh);
     box-shadow: 0px 1px 5px grey;
     z-index: 1;
 }
 
 .header form {
-    margin-left: 20px;
-    width: 90%;
+    width: 75%;
+    justify-self: center;
 }
 
 form > input[type="search"] {
+    border-radius: 20px;
     width: 100%;
+    height: 3rem;
+    border: 1px solid var(--medium-line-colour);
+    background-color: var(--light-bg-colour);
+    padding: 5px;
+    padding-left: 2%;
+    font-size: 1.5rem;
+}
+
+form > input[type="search"]:focus {
+    border: 2px solid var(--dark-line-colour);
+    outline: none;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form > img {
+    height: 2.5rem;
 }
 
 .user-options, .creation-buttons {
     justify-self: center;
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
 } 
 
-.creation-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.user-options {
+    align-items: center;
+    justify-content: center;
+    gap: max(10px, 10%);
+    font-size: 1.7rem;
+    font-weight: bold;
+}
 
+.user-options > img {
+    height: 2.5rem;
+}
+
+.user-options > .avatar-small {
+    height: 5rem;
+}
+
+.user-bar {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    gap: max(20px, 1.5vw);
+}
+
+.user-greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+
+#user-name {
+    font-size: 2.2rem;
+}
+
+.avatar-large {
+    height: 8rem;
+}
+
+.creation-buttons {
+    flex-wrap: wrap;
 }
 
 .header button {
     color: #fff;
     text-align: center;
-    background-color: #fb923c;
+    background-color: var(--medium-bg-colour);
     border-radius: 20px;
     width: min(100px, 25%);
     padding: 10px 30px;
@@ -115,7 +179,7 @@ form > input[type="search"] {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: #fff7ed;
+    background-color: var(--light-bg-colour)
 }
 
 .projects, .announcements, .trending {
@@ -133,7 +197,7 @@ form > input[type="search"] {
 }
 
 .card {
-    border: 1px solid #ea580c;
+    border: 1px solid var(--medium-line-colour);
     border-radius: 5px;
     height: 150px;
     padding: 10px;
@@ -173,7 +237,7 @@ form > input[type="search"] {
 }
 
 .news-container > .news:not(.news:last-of-type) {
-    border-bottom: 1px solid #7c2d12;
+    border-bottom: 1px solid var(--dark-line-colour);
 }
 
 .card > h3 {
