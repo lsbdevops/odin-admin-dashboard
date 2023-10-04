@@ -134,7 +134,7 @@ form > img {
     font-weight: bold;
 }
 
-.user-options > img {
+.user-options > a > img {
     height: 2.5rem;
 }
 
@@ -240,6 +240,19 @@ form > img {
     box-shadow: inset 3px 0px var(--medium-line-colour);
 }
 
+.card h3 {
+    margin: 0px;
+}
+
+.main-content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-content a:hover {
+    color: var(--dark-bg-colour)
+}
+
 .card-icons {
     display: flex;
     flex-direction: row-reverse;
@@ -247,8 +260,16 @@ form > img {
     gap: 10px;
 }
 
-.card-icons > img {
+.card-icons img {
     width: 30px;
+}
+
+.card-icons > a {
+    width: 30px;
+}
+
+.card-icons > a:hover {
+    filter: invert(32%) sepia(99%) saturate(2442%) hue-rotate(8deg) brightness(103%) contrast(91%);
 }
 
 .icon {
@@ -274,10 +295,6 @@ form > img {
 
 .news-container > .news:not(.news:last-of-type) {
     border-bottom: 1px solid var(--dark-line-colour);
-}
-
-.card > h3 {
-    margin: 0px;
 }
 
 .trending-users-container { 
